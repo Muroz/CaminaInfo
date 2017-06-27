@@ -45,7 +45,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-map-signs" aria-hidden="true"></i> Camina</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Camina</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,12 +74,9 @@
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <!--<h1> Embrace your wanderlust.</h1>
-                            <h2> Use our app to explore new trails and reconnect with trails you thought you knew.  
-						    <br><br></h2>
-                            <a href="" class="btn btn-outline btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Get Early Access</a>-->
-                            <!--<h1><i class="fa fa-map-signs" aria-hidden="true"></i></h1>-->
-                            <!--<h2>A trail guide in an app</h2>-->
+                            <h1> Embrace your wanderlust.</h1>
+							<h2>Use our app to explore the history, geo and learn more about the trails you are hiking. <br><br></h2>
+                            <a href="" class="btn btn-outline btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Get Early Access</a>
                         </div>
                     </div>
                 </div>
@@ -136,10 +133,10 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                     <img src="/img/Trails.png" class="img-responsive" alt="" name="move">
                                     <img src="/img/Map.png" class="img-responsive" alt="" name="move">
-									 <img src="/img/history.png" class="img-responsive" alt="" name="move">
-									  <img src="/img/overview.png" class="img-responsive" alt="" name="move">
+									 <img src="/img/Leaderboard.png" class="img-responsive" alt="" name="move">
+									  <img src="/img/Profile.png" class="img-responsive" alt="" name="move">
+									   <img src="/img/Trails.png" class="img-responsive" alt="" name="move">
 									</div>
 								<button class="w3-btn w3-display-left" style="left:10px" onclick="plusDivs(-1)">&#10094;</button>
                                 <button class="w3-btn w3-display-right w3-opacity-min" style="right:10px" onclick="plusDivs(1)">&#10095;</button>
@@ -155,16 +152,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-item">
-<h1><i class="fa fa-map-signs" aria-hidden="true"></i>
+                                    <i class="icon-map text-primary"></i>
                                     <h3>Offline Map</h3>
-                                    <p class="text-muted">Make sure you know the way on the trail,  No WIFI or Data required.</p>
+                                    <p class="text-muted">Make sure you know the way on the trail,  No WIFI or Data required</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="fa fa-picture-o text-primary"></i>
                                     <h3>Placemarks</h3>
-                                    <p class="text-muted">Get to know the geological and cultural landscapes you are exploring!</p>
+                                    <p class="text-muted">Get history a on certain locations on the trail as you approch them!</p>
   
                                 </div>
                             </div>
@@ -172,17 +169,19 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="fa fa-map-marker text-primary" ></i>
+                                     <i class="fa fa-camera-retro text-primary"></i>
+                                    <i class="icon-trophy text-primary"></i>
+                                    <i class="fa fa-leaf text-primary" ></i>
 
-                                    <h3>Recommendations</h3>
-                                    <p class="text-muted">Get recommendations for new trails in your current area.</p>
+                                    <h3>Ranking Photo</h3>
+                                    <p class="text-muted">Compare your trail achievements with other trail hikers!</p>
                                 </div>
                             </div>
 							<div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="fa fa-share-square-o text-primary"></i>
                                     <h3>Share</h3>
-                                    <p class="text-muted">Share your adventure with family and friends!</p>
+                                    <p class="text-muted">Share your adventure with your friends on social media!</p>
 
                                 </div>
                             </div>
@@ -258,7 +257,8 @@
         <label for="email">Email:</label>
         <input type="text" class="form-control input-sm" id="email">
 		</div>
-	    <button type="button" class="btn btn-default" id ="signup" data-dismiss="modal" data-toggle="modal" data-target="#tyModal">Signup</button>
+        <span id="thankyou"></span>
+	    <button type="button" class="btn btn-default" id ="signup">Signup</button>
 
         </form>
         </div>
@@ -266,23 +266,7 @@
       
     </div>
   </div>
-
-   <div class="modal fade" id="tyModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-    
-      <!-- Modal content-->
-      <div class="modal-content text-primary">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title text-primary">Thank You </h4>
-        </div>
-        <div class="modal-body">
-            <p>Thank you, we will notify you when the app goes live</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+  
     <!-- jQuery -->
     <script src="/lib/jquery/jquery.min.js"></script>
 
@@ -299,7 +283,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script>
-    $(document).ready(function () {
+$(document).ready(function () {
 
   // Initialize Firebase
   var config = {
@@ -311,17 +295,15 @@
     messagingSenderId: "768576861121"
   };
   firebase.initializeApp(config);
-    id = makeid()
+
+  id =makeid()
   var mycookies = readCookie("mycookies")
+  console.log(mycookies)
   if(mycookies == null){
     createCookie("mycookies", id, 30)
-    mycookies =readCookie("mycookies")
-    var visitorRef = firebase.database().ref('visitor').child(mycookies);
-    visitorRef.set({
-        id:mycookies
-    });
   }else{
     mycookies =readCookie("mycookies")
+    console.log(mycookies)
     var visitorRef = firebase.database().ref('visitor').child(mycookies);
     visitorRef.set({
         id:mycookies
@@ -332,16 +314,17 @@
     var name = $('#usr').val()
     var email =$("#email").val()
     var id  = makeid()
-    console.log(id)
     var userRef = firebase.database().ref('users').child(id);
     userRef.set({
     username: name,
     email: email,
   });  
-
+  $('#usr').val('') 
+  $("#email").val('')  
+  $("#thankyou").append("Thank you, we will notify you when the app goes live<br><br>")
     });
 
-
+});
 
 function makeid()
 {
@@ -374,7 +357,6 @@ function createCookie(name, value, days) {
             return null;
         }
   
-  });
 
 
 </script>

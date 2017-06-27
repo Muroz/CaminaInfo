@@ -1,0 +1,36 @@
+[debug] [2017-06-23T17:10:49.902Z] ----------------------------------------------------------------------
+[debug] [2017-06-23T17:10:49.904Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-23T17:10:49.905Z] CLI Version:  3.9.1
+[debug] [2017-06-23T17:10:49.905Z] Platform:     darwin
+[debug] [2017-06-23T17:10:49.905Z] Node Version: v6.11.0
+[debug] [2017-06-23T17:10:49.906Z] Time:         Fri Jun 23 2017 14:40:49 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:49.906Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-23T17:10:49.923Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-23T17:10:49.924Z] > authorizing via signed-in user
+[debug] [2017-06-23T17:10:49.926Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-23T17:10:49.926Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/nyPKcqjOMOG6iYw0N9k_RmYMcbn4Luuw0eoSQ4vJ8-0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jun 23 2017 14:40:49 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:50.281Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-23T17:10:50.294Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/camina-info  
+ Fri Jun 23 2017 14:40:50 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:51.054Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-23T17:10:51.056Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/camina-info/tokens  
+ Fri Jun 23 2017 14:40:51 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:52.203Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/shawnchen/Desktop/proximasTrails_info'...
+[info] 
+[debug] [2017-06-23T17:10:52.208Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/camina-info  
+ Fri Jun 23 2017 14:40:52 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:52.702Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-23T17:10:52.702Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/768576861121/clients/_:getWebAppConfig  
+ Fri Jun 23 2017 14:40:52 GMT-0230 (NDT)
+[debug] [2017-06-23T17:10:53.352Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
